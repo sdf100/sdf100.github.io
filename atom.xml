@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  <icon>https://sdf100.github.io/icon.png</icon>
+  
+  <link href="https://sdf100.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://sdf100.github.io/"/>
+  <updated>2021-10-17T10:04:40.730Z</updated>
+  <id>https://sdf100.github.io/</id>
+  
+  <author>
+    <name>sdf100</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寻找flag初尝试2</title>
+    <link href="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/"/>
+    <id>https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/</id>
+    <published>2021-10-17T09:43:16.000Z</published>
+    <updated>2021-10-17T10:04:40.730Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Step1：点击运维设备，会跳转到&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>寻找flag初尝试</title>
+    <link href="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/"/>
+    <id>https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/</id>
+    <published>2021-10-17T09:43:11.000Z</published>
+    <updated>2021-10-17T09:49:01.621Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;先打开网址F12，查找源代码&lt;br&gt;源码有个snake.js大于2500是执行一段脚本，&lt;br&gt;直接复制出来扔console里执行&lt;br&gt;发现不对，直接点后面报错Open&lt;br&gt;得到flag答案&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>111</title>
+    <link href="https://sdf100.github.io/2021/09/10/111-2/"/>
+    <id>https://sdf100.github.io/2021/09/10/111-2/</id>
+    <published>2021-09-10T09:06:59.000Z</published>
+    <updated>2021-09-10T09:18:21.074Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1234&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PHP2</title>
+    <link href="https://sdf100.github.io/2021/08/08/PHP2/"/>
+    <id>https://sdf100.github.io/2021/08/08/PHP2/</id>
+    <published>2021-08-08T06:50:55.000Z</published>
+    <updated>2021-08-08T06:52:02.578Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;PHP 可以生成动态页面内容&lt;br&gt;PHP 可以创建、打开、读取、写入、关闭服务器上的文件&lt;br&gt;PHP 可以收集表单数据&lt;br&gt;PHP 可以发送和接收 cookies&lt;br&gt;PHP 可以添加、删除、修改您的数据库中的数据&lt;br&gt;PHP</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SQL注入基本</title>
+    <link href="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/"/>
+    <id>https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/</id>
+    <published>2021-08-01T01:16:08.000Z</published>
+    <updated>2021-08-01T01:16:53.969Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;MYsql系统表&lt;br&gt;information_schema是一个数据库&lt;br&gt;确切说师信息数据库，其中保存着其他数据库的信息。如数据名，数据表名&lt;br&gt;SCHEMATA表：提供了mysql实例中所有数据库的信息。show</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SQL1</title>
+    <link href="https://sdf100.github.io/2021/07/25/SQL1/"/>
+    <id>https://sdf100.github.io/2021/07/25/SQL1/</id>
+    <published>2021-07-25T01:35:21.000Z</published>
+    <updated>2021-07-25T01:36:28.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;SQL语句&lt;br&gt;范围包括数据插入查询更新和删除&lt;br&gt;数据库模式创建和修改   以及数据访问控制&lt;br&gt;SQL分为两部分&lt;br&gt;数据操作语言    DML&lt;br&gt;数据定义语言    DDL&lt;br&gt;DML             SELECT从数据库表中获取数据&lt;br&gt; </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mysql的启动</title>
+    <link href="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/"/>
+    <id>https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/</id>
+    <published>2021-07-18T03:17:10.000Z</published>
+    <updated>2021-07-18T03:17:53.891Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;打开mysql的方式&lt;br&gt;启动命令提示符&lt;br&gt;win10为Windows PowerShell&lt;br&gt;停止命令 net stop mysql80&lt;br&gt;启动命令net start</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MySQLjichu1</title>
+    <link href="https://sdf100.github.io/2021/07/16/MySQLjichu1/"/>
+    <id>https://sdf100.github.io/2021/07/16/MySQLjichu1/</id>
+    <published>2021-07-16T02:52:46.000Z</published>
+    <updated>2021-07-16T02:54:41.838Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;保存数据的容器&lt;br&gt;数组 集合（内存）易失性        文件（不适合查询）（永久存储）&lt;br&gt;管理系统   数据库软件   实现数据持久化&lt;br&gt;使用完整 管理统一&lt;br&gt;1.DB 数据库（database）一系列有组织的数据    2.DBMS</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html</title>
+    <link href="https://sdf100.github.io/2021/07/13/html/"/>
+    <id>https://sdf100.github.io/2021/07/13/html/</id>
+    <published>2021-07-13T08:36:48.000Z</published>
+    <updated>2021-07-13T08:42:44.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;HTML&lt;br&gt;超文本（指超链接）标记语言&lt;br&gt;它负责网页的结构&lt;br&gt;word不是文本&lt;br&gt;建一个word可以称为网页&lt;br&gt;.html      网页格式&lt;br&gt;编写网页&lt;br&gt;标记    </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>web初</title>
+    <link href="https://sdf100.github.io/2021/07/11/web%E5%88%9D/"/>
+    <id>https://sdf100.github.io/2021/07/11/web%E5%88%9D/</id>
+    <published>2021-07-11T04:13:14.000Z</published>
+    <updated>2021-07-11T04:19:10.717Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;软件由两部分组成&lt;br&gt;客户端    服务器&lt;br&gt;服务器开发语言 Java主 PHP C# Python Node.js&lt;br&gt;客户端形式 文字客户端 图形化界面 网页B/S&lt;br&gt;网页优于软件：不需要安装 无需更新 跨平台&lt;br&gt;网页使用的语言  HTML CSS</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://sdf100.github.io/2021/07/06/hello-world/"/>
+    <id>https://sdf100.github.io/2021/07/06/hello-world/</id>
+    <published>2021-07-06T08:23:29.982Z</published>
+    <updated>2021-07-06T08:23:29.982Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
