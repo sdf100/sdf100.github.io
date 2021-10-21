@@ -71,6 +71,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-php1学习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2021-10-21T05:07:54.000Z" itemprop="datePublished">2021-10-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/">php1学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <?php               //开始标记，//<?                //php的短标记，需要在php.ini 中进行配置。phpinfo();          //显示php 的详细配置信息，其中包含系统与Apache 服务器信息。                    //结束标记?>
+<p>只要能够在一个网站中，看到phpinfo() 的内容，说明php 环境’正常’；如果是一个在线的网站能够看到该页面，说明存在敏感信息泄露 漏洞，这个漏洞需要体现在后面的渗透测试报告中；再有，如果通过文件上传，能够看到该页面，说明存在文件上传 漏洞，并且能够”完美利用”。<br><?php ?> 这之间就表示进入PHP模式，在开始和结束标记之外的内容都会被PHP解析器忽略，之外的内容会被作为字符输出到浏览器中。<br>可以直接嵌入到html代码中，并且可以嵌入到html代码中的任何地方，可以实现PHP 代码与HTML 代码进行混编 ，HTML 代码对于PHP 来说，就是字符串。PHP 负责将字符输出到浏览器中，浏览器负责根据字符中所包含的HTML 代码进行渲染。<br>在一个html文档中可以嵌入任意多个PHP 标记！<br>文件末尾的PHP代码段结束标记?&gt; 可以不要,在一些情况下省略掉更好！<br>建议，不要省略结束标记。<br>指令分隔符<br>分号，;。<br>PHP 用分号表示一句话的结束。<br>结束标志?&gt; 就隐含一个分号，所以PHP 代码最后一行可以不用加分号!<br>建议，每条PHP 语句都要使用分号结束。<br>注释<br><?php/*这是一个多行注释，可以有多行文字*///这是单行注释?><?php/*    This is index.php!    --AJEST--*/​// DNSec.com.cn​?><br>遇到空白的处理<br>空白符包括：<br>空格<br>tab制表符<br>换行<br>这些在PHP中都是无关紧要的（注意都是英文输入法下输入的），可以将一个语句展开成任意行，或者紧缩在一行，空格与空行的合理运用可以增强代码的清晰性与可读性，如果运用不合理反而会对阅读产生负担！<br>不能是用空白符打断PHP 的关键字（函数名，语句名，变量名，类名，方法名等等）。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckv0hiwme0008pwu78sj18oni" data-title="php1学习" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-寻找flag初尝试2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" class="article-date">
@@ -109,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckuzkh2mv000944u72lxrh6cv" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckv0hiwmf000apwu7a3np8dh8" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
       
       
       
@@ -148,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckuzkh2mt000844u7827rd6r5" data-title="寻找flag初尝试" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckv0hiwml000bpwu78ftn969b" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -187,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckuzkh2mf000044u717nuf31y" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckv0hiwm70001pwu7b4h1ddep" data-title="111" class="article-share-link">Share</a>
       
       
       
@@ -226,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckuzkh2mo000444u7eq4bfuep" data-title="PHP2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckv0hiwm20000pwu78zfs6dzo" data-title="PHP2" class="article-share-link">Share</a>
       
       
       
@@ -265,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckuzkh2ml000244u7ei229i2e" data-title="SQL注入基本" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckv0hiwm80002pwu7ar774n6p" data-title="SQL注入基本" class="article-share-link">Share</a>
       
       
       
@@ -304,7 +344,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckuzkh2mk000144u79s6eacpt" data-title="SQL1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckv0hiwmb0004pwu70nvufbez" data-title="SQL1" class="article-share-link">Share</a>
       
       
       
@@ -343,7 +383,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckuzkh2ms000744u76y5yepdc" data-title="mysql的启动" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckv0hiwmd0006pwu7c5ahf6w6" data-title="mysql的启动" class="article-share-link">Share</a>
       
       
       
@@ -382,7 +422,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckuzkh2mq000544u7bnbyhfhx" data-title="MySQLjichu1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckv0hiwmb0003pwu789prbtc1" data-title="MySQLjichu1" class="article-share-link">Share</a>
       
       
       
@@ -429,46 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/13/html/" data-id="ckuzkh2mr000644u72hzxa207" data-title="html" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-web初" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/11/web%E5%88%9D/" class="article-date">
-  <time class="dt-published" datetime="2021-07-11T04:13:14.000Z" itemprop="datePublished">2021-07-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/11/web%E5%88%9D/">web初</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>软件由两部分组成<br>客户端    服务器<br>服务器开发语言 Java主 PHP C# Python Node.js<br>客户端形式 文字客户端 图形化界面 网页B/S<br>网页优于软件：不需要安装 无需更新 跨平台<br>网页使用的语言  HTML CSS JavaScript<br>C/S    B（浏览器）/S<br>蒂姆 伯纳斯-李爵士 万维网的发明者<br>1991.8.6 第一个服务器和第一个网站在欧洲核子研究中心上线<br>浏览器（渲染） 用来访问 网站<br>W3C(万维网联盟)制定了网页开发的标准<br>HTLM结构           描述页面的结构<br>CSS表现        控制页面中元素<br>JavaSvrip行为   响应用户操作</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/11/web%E5%88%9D/" data-id="ckuzkh2my000a44u7d2g7a0fl" data-title="web初" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/13/html/" data-id="ckv0hiwmd0007pwu7c7hoapst" data-title="html" class="article-share-link">Share</a>
       
       
       
@@ -516,6 +517,10 @@
       <ul>
         
           <li>
+            <a href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/">php1学习</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/">寻找flag初尝试2</a>
           </li>
         
@@ -529,10 +534,6 @@
         
           <li>
             <a href="/2021/08/08/PHP2/">PHP2</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/">SQL注入基本</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-10-17T10:04:40.730Z</updated>
+  <updated>2021-10-21T05:08:45.184Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php1学习</title>
+    <link href="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-10-21T05:07:54.000Z</published>
+    <updated>2021-10-21T05:08:45.184Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;?php               //开始标记，//&lt;?                //php的短标记，需要在php.ini 中进行配置。phpinfo();          //显示php 的详细配置信息，其中包含系统与Apache 服务器信息。         </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>寻找flag初尝试2</title>
