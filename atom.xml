@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-10-21T05:08:45.184Z</updated>
+  <updated>2021-10-22T10:47:52.471Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php2</title>
+    <link href="https://sdf100.github.io/2021/10/22/php2-0/"/>
+    <id>https://sdf100.github.io/2021/10/22/php2-0/</id>
+    <published>2021-10-22T10:46:52.000Z</published>
+    <updated>2021-10-22T10:47:52.471Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;变量包含四个部分内容：&lt;/p&gt;
+&lt;p&gt;变量名&lt;br&gt;内存空间（一般不需要关心，都是程序自动完成创建与销毁的。）&lt;br&gt;变量值（变化）&lt;br&gt;数据类型，变量值的类型（可以是抽象的）&lt;br&gt;变量是用于临时存储值的容器。&lt;/p&gt;
+&lt;p&gt;变量在任何编程语言中的都是核心地位。&lt;/p&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php1学习</title>
