@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-10-22T10:47:52.471Z</updated>
+  <updated>2021-10-27T15:00:01.311Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php3</title>
+    <link href="https://sdf100.github.io/2021/10/27/php3/"/>
+    <id>https://sdf100.github.io/2021/10/27/php3/</id>
+    <published>2021-10-27T14:58:43.000Z</published>
+    <updated>2021-10-27T15:00:01.311Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;变量类型是指保存在该变量中的数据的数据类型，在计算机编程语言世界中每个数据都有它的类型。&lt;/p&gt;
+&lt;p&gt;具有相同类型的数据才能被彼此相互操作。&lt;/p&gt;
+&lt;p&gt;在强类型的语言中例如C语言，变量要先指定类型（变量的声明），然后才可以存储对应指定的数据，就好比现实生活中在制作一个</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php2</title>

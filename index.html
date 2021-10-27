@@ -71,6 +71,109 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-php3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/27/php3/" class="article-date">
+  <time class="dt-published" datetime="2021-10-27T14:58:43.000Z" itemprop="datePublished">2021-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/27/php3/">php3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>变量类型是指保存在该变量中的数据的数据类型，在计算机编程语言世界中每个数据都有它的类型。</p>
+<p>具有相同类型的数据才能被彼此相互操作。</p>
+<p>在强类型的语言中例如C语言，变量要先指定类型（变量的声明），然后才可以存储对应指定的数据，就好比现实生活中在制作一个柜子之前，就要决定好这个柜子是什么类型的柜子，是书柜那么以后就只能用来存书，是衣柜以后就只能用来存衣服。</p>
+<p>但是PHP 是一种弱类型的语言，和其他语言不同的是，变量或者常量的数据类型由程序的上下文决定，不需要事先声明类型。一个柜子，要是往里面存书籍那么他就是书柜；要是往里面存放衣服，那么它就是衣柜，根本不需要事先说明这个是书柜还是衣柜，一切根据实际需要使用即可！</p>
+<p>可以将数据的变量类型输出，使用的函数var_dump()。</p>
+<?php
+$name= "AJEST";
+$age = 24;
+var_dump($name);        //string(5) "AJEST"
+var_dump($age);            //int(24) 
+?>
+<p>bool - 布尔型<br>boolean</p>
+<p>这个是最简单的类型，布尔型表达了true 或false ，即真或假。</p>
+<?php
+$a = true;
+$b = false;
+var_dump($a);
+echo "<hr />";
+var_dump($b);
+?>
+<p>进行if 判断的时候，会有类型转换（PHP 定义好了的），其他类型的之转换成布尔类型的值。以下值被认为是false，其他的值都是被认为是true。</p>
+<p>bool(false)<br>int(0)<br>float(0)<br>string(0) “” 或者 string(1) “0”<br>array(0) { }<br>NULL<br>&lt;?php<br>//$a = true;    //True<br>//$a = false;    //Fasle<br>//$a = 0;<br>//$a = 0.0;<br>//$a = “0”;<br>//$a = “”;<br>//$a = array();<br>$a = null;<br>var_dump($a);<br>echo “<hr />“;</p>
+<p>if($a){<br>    echo ‘True’;<br>}else{<br>    echo ‘False’;<br>}<br>?&gt;<br>int - 整型<br>存储整数</p>
+<?php
+$age = 24;
+var_dump($age);
+?>
+<p>float - 浮点型，也称double<br>浮点型，指包含小数的数。</p>
+<?php
+$score = 59.9;
+var_dump($score);
+?>
+<p>string - 字符串<br>字符串是一系列的字符。</p>
+<p>字符串可以使用单引号、双引号、定界符三种方法来定义！</p>
+<p>单引号<br>指定一个简单的字符串最简单的方法是使用一对单引号’括起来。<br>注意在单引号括起来的字符串中不能再包含单引号,如果实在要用单引号那么就需要用反斜杠()转义。<br>单引号字符串中出现的变量不会被变量的值替代,即PHP 不会解析单引号中的变量,因此在定义简单字符串的时候，使用单引号会效率更高，因此没有特别的要求，应使用单引号定义字符串！</p>
+<?php
+$name = 'AJEST';                //string(5) "AJEST"
+$str = 'let\'s go!';            //string(9) "let's go!" 
+$str = '{$name},let\'s go!';    //string(17) "{$name},let's go!"
+var_dump($name);
+?>
+<p>双引号<br>双引号” 括起来<br>双引号中包含双引号，需要进行转义。<br>其中的变量名会被变量值所代替，即PHP 会解析双引号之间的变量，最好用{} 将变量名括起来。</p>
+<?php
+$name = 'AJEST';
+$str = "let's go!";                //string(9) "let's go!" 
+$str = "Do you like \"me\"?";    //string(17) "Do you like "me"?" 
+$str = "{$name},let's go!";        //string(15) "AJEST,let's go!" 
+$str = "{\$name},let's go!";    //string(17) "{$name},let's go!" 
+var_dump($str);
+?>
+<p>经常会用PHP 语言写一些HTML 代码。</p>
+<p>My name is <span id = 'name' style = "color:pink;">{$name}</span><br>定界符<br>定界符定义的字符串中的单双引号，还有大部分特殊字符不需要进行转义。<br>&lt;&lt;&lt; 之后提供一个标示符开始，然后是字符串的内容最后是同样的标示符表示结束，结束标示符之后必须接; 不可以用其他的任何字符（包括分号之后）。<br>标示符的命名规则：字母、数字、下划线，并且不能以数字开始。<br>定界符中的$ 同样会识别成变量，变量名要用{} 括起来。</p>
+<?php
+$name = 'XJH';
+$str = <<<HTML
+
+My name is <span id = 'name' style = "color:pink;">{$name}</span>
+
+HTML;
+
+echo $str;
+?>
+<p>其他数据类型<br>数组<br>对象<br>资源<br>变量类型相互转换（了解）<br>自动类型转换<br>有布尔值参与运算时，true将转化为整型1，false将转化为整型0<br>有null值参与运算时，null值转化为整型0再进行运算<br>有int型和float数据参与运算时，先把int转变为float类型后再进行运算<br>有字符串和数字型(int或者float)参与运算时的情况 这些都是程序运行中不太可控的部分所以在编写代码时最好不要涉及!</p>
+<p>强制类型转换<br>在要转换的变量之前加上括号括起来目标类型<br>(int)<br>(bool)<br>(float)<br>(string)<br>(array)<br>(object)<br>转变并不会改变被转换变量本身的类型</p>
+<p>变量类型的测试函数<br>is_bool()<br>is_int()<br>is_array() …</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckv9na0ef000aa4u7apfy9mxy" data-title="php3" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-php2-0" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/22/php2-0/" class="article-date">
@@ -175,7 +278,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckv292enj000axgu7cm7pe2z1" data-title="php2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckv9na0ee0009a4u7fyut9v3f" data-title="php2" class="article-share-link">Share</a>
       
       
       
@@ -215,7 +318,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckv292enc0007xgu73gqm13aj" data-title="php1学习" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckv9na0ec0007a4u730anb9zd" data-title="php1学习" class="article-share-link">Share</a>
       
       
       
@@ -265,7 +368,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckv292enm000cxgu7hken246n" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckv9na0eo000da4u7dpkjdypw" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
       
       
       
@@ -304,7 +407,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckv292enl000bxgu78d8cc0s3" data-title="寻找flag初尝试" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckv9na0eh000ba4u7hbwve2y1" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -343,7 +446,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckv292emx0000xgu7cbb549h0" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckv9na0e50001a4u77cpdfx8o" data-title="111" class="article-share-link">Share</a>
       
       
       
@@ -382,7 +485,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckv292en40001xgu79exi588i" data-title="PHP2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckv9na0e70002a4u7h0u764jd" data-title="PHP2" class="article-share-link">Share</a>
       
       
       
@@ -421,7 +524,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckv292en70003xgu7co6c5mi6" data-title="SQL注入基本" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckv9na0e90004a4u745km28kw" data-title="SQL注入基本" class="article-share-link">Share</a>
       
       
       
@@ -460,7 +563,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckv292en80004xgu7026ug305" data-title="SQL1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckv9na0e80003a4u7ev328cjn" data-title="SQL1" class="article-share-link">Share</a>
       
       
       
@@ -499,46 +602,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckv292enc0008xgu79wa1c3ak" data-title="mysql的启动" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-MySQLjichu1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/16/MySQLjichu1/" class="article-date">
-  <time class="dt-published" datetime="2021-07-16T02:52:46.000Z" itemprop="datePublished">2021-07-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/16/MySQLjichu1/">MySQLjichu1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>保存数据的容器<br>数组 集合（内存）易失性        文件（不适合查询）（永久存储）<br>管理系统   数据库软件   实现数据持久化<br>使用完整 管理统一<br>1.DB 数据库（database）一系列有组织的数据    2.DBMS 数据库管理系统（database management system）<br>MySQL 常见的数据库管理系统<br>Oracle 贵<br>DB2<br>SqlServer 只能在windows系统<br>3.SQY   结构化查询语言 （structure Query Language）<br>几乎所有DBMS都支持SQL<br>简单易学可以进行非常复杂和高级的数据库操作<br>数据库<br>现将数据放在表中    表再放在库中<br>一个数据库可以有多个表   每个表都有唯一的名字<br>表有自己的特性   定义数据在表如何储存<br>表由列组成   称为字段   有多列<br>表中数据是按行储存的<br>MySQL隶属MySQLAB公司  总部位于瑞典<br>08年被SUN收购   09被 Oracle<br>成本低  开放源代码  一般免费试用<br>性能高 执行很快<br>简单  很容易安装和使用<br>DBMS为两类<br>基于共享文件系统的DBMS（Access）<br>基于客户机——服务器的DBMS（MySQL Oracle SqlServer）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckv292en60002xgu7b4xmfjft" data-title="MySQLjichu1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckv9na0ed0008a4u71qao3dc4" data-title="mysql的启动" class="article-share-link">Share</a>
       
       
       
@@ -586,6 +650,10 @@ echo $c;echo "|";echo $a;
       <ul>
         
           <li>
+            <a href="/2021/10/27/php3/">php3</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/22/php2-0/">php2</a>
           </li>
         
@@ -599,10 +667,6 @@ echo $c;echo "|";echo $a;
         
           <li>
             <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/">寻找flag初尝试</a>
-          </li>
-        
-          <li>
-            <a href="/2021/09/10/111-2/">111</a>
           </li>
         
       </ul>

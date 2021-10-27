@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>php3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="变量类型是指保存在该变量中的数据的数据类型，在计算机编程语言世界中每个数据都有它的类型。 具有相同类型的数据才能被彼此相互操作。 在强类型的语言中例如C语言，变量要先指定类型（变量的声明），然后才可以存储对应指定的数据，就好比现实生活中在制作一个柜子之前，就要决定好这个柜子是什么类型的柜子，是书柜那么以后就只能用来存书，是衣柜以后就只能用来存衣服。 但是PHP 是一种弱类型的语言，和其他语言不同的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php3">
+<meta property="og:url" content="https://sdf100.github.io/2021/10/27/php3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="变量类型是指保存在该变量中的数据的数据类型，在计算机编程语言世界中每个数据都有它的类型。 具有相同类型的数据才能被彼此相互操作。 在强类型的语言中例如C语言，变量要先指定类型（变量的声明），然后才可以存储对应指定的数据，就好比现实生活中在制作一个柜子之前，就要决定好这个柜子是什么类型的柜子，是书柜那么以后就只能用来存书，是衣柜以后就只能用来存衣服。 但是PHP 是一种弱类型的语言，和其他语言不同的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-27T14:58:43.000Z">
+<meta property="article:modified_time" content="2021-10-27T15:00:01.311Z">
+<meta property="article:author" content="sdf100">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sdf100.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-php3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/27/php3/" class="article-date">
+  <time class="dt-published" datetime="2021-10-27T14:58:43.000Z" itemprop="datePublished">2021-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      php3
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>变量类型是指保存在该变量中的数据的数据类型，在计算机编程语言世界中每个数据都有它的类型。</p>
+<p>具有相同类型的数据才能被彼此相互操作。</p>
+<p>在强类型的语言中例如C语言，变量要先指定类型（变量的声明），然后才可以存储对应指定的数据，就好比现实生活中在制作一个柜子之前，就要决定好这个柜子是什么类型的柜子，是书柜那么以后就只能用来存书，是衣柜以后就只能用来存衣服。</p>
+<p>但是PHP 是一种弱类型的语言，和其他语言不同的是，变量或者常量的数据类型由程序的上下文决定，不需要事先声明类型。一个柜子，要是往里面存书籍那么他就是书柜；要是往里面存放衣服，那么它就是衣柜，根本不需要事先说明这个是书柜还是衣柜，一切根据实际需要使用即可！</p>
+<p>可以将数据的变量类型输出，使用的函数var_dump()。</p>
+<?php
+$name= "AJEST";
+$age = 24;
+var_dump($name);        //string(5) "AJEST"
+var_dump($age);            //int(24) 
+?>
+<p>bool - 布尔型<br>boolean</p>
+<p>这个是最简单的类型，布尔型表达了true 或false ，即真或假。</p>
+<?php
+$a = true;
+$b = false;
+var_dump($a);
+echo "<hr />";
+var_dump($b);
+?>
+<p>进行if 判断的时候，会有类型转换（PHP 定义好了的），其他类型的之转换成布尔类型的值。以下值被认为是false，其他的值都是被认为是true。</p>
+<p>bool(false)<br>int(0)<br>float(0)<br>string(0) “” 或者 string(1) “0”<br>array(0) { }<br>NULL<br>&lt;?php<br>//$a = true;    //True<br>//$a = false;    //Fasle<br>//$a = 0;<br>//$a = 0.0;<br>//$a = “0”;<br>//$a = “”;<br>//$a = array();<br>$a = null;<br>var_dump($a);<br>echo “<hr />“;</p>
+<p>if($a){<br>    echo ‘True’;<br>}else{<br>    echo ‘False’;<br>}<br>?&gt;<br>int - 整型<br>存储整数</p>
+<?php
+$age = 24;
+var_dump($age);
+?>
+<p>float - 浮点型，也称double<br>浮点型，指包含小数的数。</p>
+<?php
+$score = 59.9;
+var_dump($score);
+?>
+<p>string - 字符串<br>字符串是一系列的字符。</p>
+<p>字符串可以使用单引号、双引号、定界符三种方法来定义！</p>
+<p>单引号<br>指定一个简单的字符串最简单的方法是使用一对单引号’括起来。<br>注意在单引号括起来的字符串中不能再包含单引号,如果实在要用单引号那么就需要用反斜杠()转义。<br>单引号字符串中出现的变量不会被变量的值替代,即PHP 不会解析单引号中的变量,因此在定义简单字符串的时候，使用单引号会效率更高，因此没有特别的要求，应使用单引号定义字符串！</p>
+<?php
+$name = 'AJEST';                //string(5) "AJEST"
+$str = 'let\'s go!';            //string(9) "let's go!" 
+$str = '{$name},let\'s go!';    //string(17) "{$name},let's go!"
+var_dump($name);
+?>
+<p>双引号<br>双引号” 括起来<br>双引号中包含双引号，需要进行转义。<br>其中的变量名会被变量值所代替，即PHP 会解析双引号之间的变量，最好用{} 将变量名括起来。</p>
+<?php
+$name = 'AJEST';
+$str = "let's go!";                //string(9) "let's go!" 
+$str = "Do you like \"me\"?";    //string(17) "Do you like "me"?" 
+$str = "{$name},let's go!";        //string(15) "AJEST,let's go!" 
+$str = "{\$name},let's go!";    //string(17) "{$name},let's go!" 
+var_dump($str);
+?>
+<p>经常会用PHP 语言写一些HTML 代码。</p>
+<p>My name is <span id = 'name' style = "color:pink;">{$name}</span><br>定界符<br>定界符定义的字符串中的单双引号，还有大部分特殊字符不需要进行转义。<br>&lt;&lt;&lt; 之后提供一个标示符开始，然后是字符串的内容最后是同样的标示符表示结束，结束标示符之后必须接; 不可以用其他的任何字符（包括分号之后）。<br>标示符的命名规则：字母、数字、下划线，并且不能以数字开始。<br>定界符中的$ 同样会识别成变量，变量名要用{} 括起来。</p>
+<?php
+$name = 'XJH';
+$str = <<<HTML
+
+My name is <span id = 'name' style = "color:pink;">{$name}</span>
+
+HTML;
+
+echo $str;
+?>
+<p>其他数据类型<br>数组<br>对象<br>资源<br>变量类型相互转换（了解）<br>自动类型转换<br>有布尔值参与运算时，true将转化为整型1，false将转化为整型0<br>有null值参与运算时，null值转化为整型0再进行运算<br>有int型和float数据参与运算时，先把int转变为float类型后再进行运算<br>有字符串和数字型(int或者float)参与运算时的情况 这些都是程序运行中不太可控的部分所以在编写代码时最好不要涉及!</p>
+<p>强制类型转换<br>在要转换的变量之前加上括号括起来目标类型<br>(int)<br>(bool)<br>(float)<br>(string)<br>(array)<br>(object)<br>转变并不会改变被转换变量本身的类型</p>
+<p>变量类型的测试函数<br>is_bool()<br>is_int()<br>is_array() …</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckv9na0ef000aa4u7apfy9mxy" data-title="php3" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/10/22/php2-0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">php2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/27/php3/">php3</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/22/php2-0/">php2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/">php1学习</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/">寻找flag初尝试2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/">寻找flag初尝试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 sdf100<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
