@@ -71,6 +71,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-php4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/28/php4/" class="article-date">
+  <time class="dt-published" datetime="2021-10-28T14:36:47.000Z" itemprop="datePublished">2021-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/28/php4/">php4</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>常量是一个简单值的标示符，如其名称所暗示的。在PHP 脚本执行期间一个常量一旦被定义，就不能被改变或者取消定义，常量的作用于是全局，常量包含bool,int,float,string类型的数据!</p>
+<p>定义和使用<br>define()</p>
+<p>常量的命名与变量类似，也遵循PHP标识符的名称规则,按照惯例常量标识符总是大写的</p>
+<?php
+define('NAME','ZTY');
+var_dump(NAME);
+NAME='SHK';            //Parse error: syntax error, unexpected '='
+var_dump(NAME);
+?>
+<p>常量和变量的区别<br>常量前面没有美元符号$ 。<br>常量只能用define() 函数定义，不能通过赋值语句。<br>常量可以不用理会变量范围的规则而在任何地方（函数的内部或者外部）定义和使用。<br>在PHP 脚本执行期间内，常量一旦被定义就不能被重新定义或者取消定义。<br>常量的值一般是bool ,int ,float ,string 类型。<br>预定义常量<br>预先定义好的常量，就是程序中可以直接使用的常量，一般来完成一些特殊功能！</p>
+<p>常量名常量值__FILE__当前的文件名，完整的路径__LINE__当前行号__FUNCTION__当前的函数名__CLASS__当前的类名__METHOD__当前对象的方法名PHP_OSUNIX或WINNT等PHP_VERSION当前PHP 服务器的版本DIRECTORY_SEPARATOR\或/ 根据操作系统决定目录的分隔符</p>
+<?php
+define('NAME','ZTY');
+var_dump(NAME);
+//NAME='SHK';            //Parse error: syntax error, unexpected '='//
+//var_dump(NAME);
+var_dump(__FILE__);        //string(35) "C:\phpStudy\WWW\php\sjlx\define.php" 
+
+var_dump(__LINE__);        //int(8) 
+var_dump(PHP_OS);        //string(5) "WINNT" 
+var_dump(PHP_VERSION);    //string(6) "5.4.45" 
+var_dump(DIRECTORY_SEPARATOR);    // string(1) "\" 
+?>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvb20kph000btcu7f6ja42k2" data-title="php4" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-php3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/27/php3/" class="article-date">
@@ -162,7 +222,7 @@ echo $str;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckv9na0ef000aa4u7apfy9mxy" data-title="php3" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvb20kpf0009tcu7330d60hh" data-title="php3" class="article-share-link">Share</a>
       
       
       
@@ -278,7 +338,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckv9na0ee0009a4u7fyut9v3f" data-title="php2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvb20kpg000atcu70xir413j" data-title="php2" class="article-share-link">Share</a>
       
       
       
@@ -318,7 +378,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckv9na0ec0007a4u730anb9zd" data-title="php1学习" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvb20kpe0008tcu79qluh2vn" data-title="php1学习" class="article-share-link">Share</a>
       
       
       
@@ -368,7 +428,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckv9na0eo000da4u7dpkjdypw" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvb20kpp000etcu72v865v3a" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
       
       
       
@@ -407,7 +467,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckv9na0eh000ba4u7hbwve2y1" data-title="寻找flag初尝试" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvb20kpi000ctcu7cv1zc61d" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -446,7 +506,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckv9na0e50001a4u77cpdfx8o" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckvb20kp00000tcu79c7z5reo" data-title="111" class="article-share-link">Share</a>
       
       
       
@@ -485,7 +545,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckv9na0e70002a4u7h0u764jd" data-title="PHP2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckvb20kp90003tcu712eigva6" data-title="PHP2" class="article-share-link">Share</a>
       
       
       
@@ -524,7 +584,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckv9na0e90004a4u745km28kw" data-title="SQL注入基本" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckvb20kp80002tcu7cc535tsc" data-title="SQL注入基本" class="article-share-link">Share</a>
       
       
       
@@ -563,46 +623,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckv9na0e80003a4u7ev328cjn" data-title="SQL1" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-mysql的启动" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" class="article-date">
-  <time class="dt-published" datetime="2021-07-18T03:17:10.000Z" itemprop="datePublished">2021-07-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/">mysql的启动</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>打开mysql的方式<br>启动命令提示符<br>win10为Windows PowerShell<br>停止命令 net stop mysql80<br>启动命令net start mysql80<br>或者打开计算机管理<br>通过服务和应用程序<br>再通过服务<br>直接选择打开或者关闭</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckv9na0ed0008a4u71qao3dc4" data-title="mysql的启动" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckvb20kpb0005tcu777yw8sc1" data-title="SQL1" class="article-share-link">Share</a>
       
       
       
@@ -650,6 +671,10 @@ echo $c;echo "|";echo $a;
       <ul>
         
           <li>
+            <a href="/2021/10/28/php4/">php4</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/27/php3/">php3</a>
           </li>
         
@@ -663,10 +688,6 @@ echo $c;echo "|";echo $a;
         
           <li>
             <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/">寻找flag初尝试2</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/">寻找flag初尝试</a>
           </li>
         
       </ul>

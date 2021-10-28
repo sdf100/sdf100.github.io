@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-10-27T15:00:01.311Z</updated>
+  <updated>2021-10-28T14:38:58.962Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php4</title>
+    <link href="https://sdf100.github.io/2021/10/28/php4/"/>
+    <id>https://sdf100.github.io/2021/10/28/php4/</id>
+    <published>2021-10-28T14:36:47.000Z</published>
+    <updated>2021-10-28T14:38:58.962Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;常量是一个简单值的标示符，如其名称所暗示的。在PHP</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php3</title>

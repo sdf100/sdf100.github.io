@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>web初 | Hexo</title>
+  <title>php4 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="软件由两部分组成客户端    服务器服务器开发语言 Java主 PHP C# Python Node.js客户端形式 文字客户端 图形化界面 网页B&#x2F;S网页优于软件：不需要安装 无需更新 跨平台网页使用的语言  HTML CSS JavaScriptC&#x2F;S    B（浏览器）&#x2F;S蒂姆 伯纳斯-李爵士 万维网的发明者1991.8.6 第一个服务器和第一个网站在欧洲核子研究中心上线浏览器（渲染） 用来">
+  <meta name="description" content="常量是一个简单值的标示符，如其名称所暗示的。在PHP 脚本执行期间一个常量一旦被定义，就不能被改变或者取消定义，常量的作用于是全局，常量包含bool,int,float,string类型的数据! 定义和使用define() 常量的命名与变量类似，也遵循PHP标识符的名称规则,按照惯例常量标识符总是大写的  常量和变量的区别常量前面没有美元符号$ 。常量只能用define() 函数定义，不能通过赋值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web初">
-<meta property="og:url" content="https://sdf100.github.io/2021/07/11/web%E5%88%9D/index.html">
+<meta property="og:title" content="php4">
+<meta property="og:url" content="https://sdf100.github.io/2021/10/28/php4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="软件由两部分组成客户端    服务器服务器开发语言 Java主 PHP C# Python Node.js客户端形式 文字客户端 图形化界面 网页B&#x2F;S网页优于软件：不需要安装 无需更新 跨平台网页使用的语言  HTML CSS JavaScriptC&#x2F;S    B（浏览器）&#x2F;S蒂姆 伯纳斯-李爵士 万维网的发明者1991.8.6 第一个服务器和第一个网站在欧洲核子研究中心上线浏览器（渲染） 用来">
+<meta property="og:description" content="常量是一个简单值的标示符，如其名称所暗示的。在PHP 脚本执行期间一个常量一旦被定义，就不能被改变或者取消定义，常量的作用于是全局，常量包含bool,int,float,string类型的数据! 定义和使用define() 常量的命名与变量类似，也遵循PHP标识符的名称规则,按照惯例常量标识符总是大写的  常量和变量的区别常量前面没有美元符号$ 。常量只能用define() 函数定义，不能通过赋值">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-11T04:13:14.000Z">
-<meta property="article:modified_time" content="2021-07-11T04:19:10.717Z">
+<meta property="article:published_time" content="2021-10-28T14:36:47.000Z">
+<meta property="article:modified_time" content="2021-10-28T14:38:58.962Z">
 <meta property="article:author" content="sdf100">
 <meta name="twitter:card" content="summary">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-web初" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-php4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/07/11/web%E5%88%9D/" class="article-date">
-  <time class="dt-published" datetime="2021-07-11T04:13:14.000Z" itemprop="datePublished">2021-07-11</time>
+    <a href="/2021/10/28/php4/" class="article-date">
+  <time class="dt-published" datetime="2021-10-28T14:36:47.000Z" itemprop="datePublished">2021-10-28</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      web初
+      php4
     </h1>
   
 
@@ -95,12 +95,33 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>软件由两部分组成<br>客户端    服务器<br>服务器开发语言 Java主 PHP C# Python Node.js<br>客户端形式 文字客户端 图形化界面 网页B/S<br>网页优于软件：不需要安装 无需更新 跨平台<br>网页使用的语言  HTML CSS JavaScript<br>C/S    B（浏览器）/S<br>蒂姆 伯纳斯-李爵士 万维网的发明者<br>1991.8.6 第一个服务器和第一个网站在欧洲核子研究中心上线<br>浏览器（渲染） 用来访问 网站<br>W3C(万维网联盟)制定了网页开发的标准<br>HTLM结构           描述页面的结构<br>CSS表现        控制页面中元素<br>JavaSvrip行为   响应用户操作</p>
+        <p>常量是一个简单值的标示符，如其名称所暗示的。在PHP 脚本执行期间一个常量一旦被定义，就不能被改变或者取消定义，常量的作用于是全局，常量包含bool,int,float,string类型的数据!</p>
+<p>定义和使用<br>define()</p>
+<p>常量的命名与变量类似，也遵循PHP标识符的名称规则,按照惯例常量标识符总是大写的</p>
+<?php
+define('NAME','ZTY');
+var_dump(NAME);
+NAME='SHK';            //Parse error: syntax error, unexpected '='
+var_dump(NAME);
+?>
+<p>常量和变量的区别<br>常量前面没有美元符号$ 。<br>常量只能用define() 函数定义，不能通过赋值语句。<br>常量可以不用理会变量范围的规则而在任何地方（函数的内部或者外部）定义和使用。<br>在PHP 脚本执行期间内，常量一旦被定义就不能被重新定义或者取消定义。<br>常量的值一般是bool ,int ,float ,string 类型。<br>预定义常量<br>预先定义好的常量，就是程序中可以直接使用的常量，一般来完成一些特殊功能！</p>
+<p>常量名常量值__FILE__当前的文件名，完整的路径__LINE__当前行号__FUNCTION__当前的函数名__CLASS__当前的类名__METHOD__当前对象的方法名PHP_OSUNIX或WINNT等PHP_VERSION当前PHP 服务器的版本DIRECTORY_SEPARATOR\或/ 根据操作系统决定目录的分隔符</p>
+<?php
+define('NAME','ZTY');
+var_dump(NAME);
+//NAME='SHK';            //Parse error: syntax error, unexpected '='//
+//var_dump(NAME);
+var_dump(__FILE__);        //string(35) "C:\phpStudy\WWW\php\sjlx\define.php" 
 
+var_dump(__LINE__);        //int(8) 
+var_dump(PHP_OS);        //string(5) "WINNT" 
+var_dump(PHP_VERSION);    //string(6) "5.4.45" 
+var_dump(DIRECTORY_SEPARATOR);    // string(1) "\" 
+?>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/11/web%E5%88%9D/" data-id="ckvb20kpj000dtcu70kdr4az9" data-title="web初" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvb20kph000btcu7f6ja42k2" data-title="php4" class="article-share-link">Share</a>
       
       
       
@@ -110,19 +131,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/07/13/html/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          html
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/07/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/10/27/php3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">php3</div>
     </a>
   
 </nav>
