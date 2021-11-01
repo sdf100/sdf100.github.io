@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-10-28T14:38:58.962Z</updated>
+  <updated>2021-11-01T15:36:41.572Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php5</title>
+    <link href="https://sdf100.github.io/2021/11/01/php5/"/>
+    <id>https://sdf100.github.io/2021/11/01/php5/</id>
+    <published>2021-11-01T15:19:51.000Z</published>
+    <updated>2021-11-01T15:36:41.572Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;运算符&lt;br&gt;运算符对一个或者多个操作数(变量或者数值)执行某种运算的符号，也称操作符！&lt;/p&gt;
+&lt;p&gt;算术运算符&lt;br&gt;例子名称结果-$a取反$a 的负值$a + $b加法$a 和 $b 的和$a - $b减法$a 和 $b 的差$a * $b乘法$a 和 $b</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php4</title>

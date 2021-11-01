@@ -71,6 +71,116 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-php5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/01/php5/" class="article-date">
+  <time class="dt-published" datetime="2021-11-01T15:19:51.000Z" itemprop="datePublished">2021-11-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/01/php5/">php5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>运算符<br>运算符对一个或者多个操作数(变量或者数值)执行某种运算的符号，也称操作符！</p>
+<p>算术运算符<br>例子名称结果-$a取反$a 的负值$a + $b加法$a 和 $b 的和$a - $b减法$a 和 $b 的差$a * $b乘法$a 和 $b 的积$a / $b除法$a 除以 $b 的商$a % $b取模$a 除以 $b 的余数++$a前加$a 的值加一，然后返回 $a$a++后加返回 $a，然后将 $a 的值加一–$a前减$a 的值减一， 然后返回 $a$a–后减返回 $a，然后将 $a 的值减一</p>
+<?php
+$a = 3;
+$b = 5;
+var_dump(-$a);                //int(-3) 
+var_dump($a+$b);            //int(8) 
+var_dump($a-$b);            //int(-2) 
+var_dump($a*$b);            //int(15) 
+var_dump($a/$b);            //float(0.6) 
+var_dump($a%$b);            //int(3) 
+$a = 10;var_dump(++$a);        //int(11) 
+$a = 10;var_dump($a++);        //int(10) 
+$a = 10;var_dump($a--);        //int(10) 
+$a = 10;var_dump(--$a);        //int(9) 
+?>
+<p>字符串运算符<br>对于JS 来说，字符串拼接+ ，另外. 访问对象中的属性或者方法。</p>
+<p>但是PHP 中使用. 进行字符串拼接。PHP 中. 也叫连接运算符。</p>
+<?php
+$name = "AJEST";
+$str = "Hello , ".$name; //string(13) "Hello , AJEST" 
+var_dump($str);
+?>
+<p>赋值运算符<br>二元运算符<br>左边的操作数必须是变量,右边可以是一个表达式，也可以是一个值，一个变量等等！<br>作用：将右边表达式的值赋给左边变量</p>
+<p>二元赋值运算符例子解释=+=-=*=/+%=.=</p>
+<?php
+$a = 10;
+$b = 5;
+$c = $a;    $c +=$a;        //$c=$c+$a,int(20)
+$c = 5;        $c -=$a;        //$c=$c-$a,int(-5) 
+$c = 4;        $c *=$a;        //$c=$c*$a,int(40) 
+$c = 20;    $c /=$a;        //$c=$c/$a,int(2) 
+$c = 21;    $c %=$a;        //$c=$c%$a,int(1) 
+$c = "Hello";$a = "World";
+$c .=$a;                    //$c = $c.$a,string(10) "HelloWorld" 
+var_dump($c);
+?>
+<p>比较运算符<br>对操作数（按照比较运算符的要求,规则）进行比较后，得到返回值（boolean）。</p>
+<p>如果比较出的结果满足比较运算符的要求那么结果就是true(真，成立，满足)，否则就是false （假，不成立，不满足）</p>
+<p>例子说明备注$a == $b等于$a === $b全等值相等并且数据类型相同$a != $b不等$a &lt;&gt; $b不等$a !== $b不全等$a &lt; $b小于$a &gt; $b大于$a &lt;= $b小于等于$a &gt;= $b大于等于</p>
+<?php
+$a = 10;
+$b = 20;
+$c = $a <> $b;    //bool(true) 
+$c = $a == $b;    //bool(false) 
+//var_dump($c);
+echo $c;
+?>
+<p>注意：<br>PHP 中规定<br>使用echo 输出布尔类型值的时候<br>echo true; ，它在页面中会输出1<br>echo false; ，它会在页面中什么都不输出<br>建议使用var_dump() 来输出更明了的结果！</p>
+<p>逻辑运算符<br>逻辑运算符例子解释运算符法则and$a and $b逻辑”与”运算&amp;&amp;$a &amp;&amp; $bor$a or $b逻辑”或”运算||$a || $bxor$a xor $b逻辑”异或”运算相同为假，不同为真!!$a逻辑”非”运算</p>
+<?php
+$a = true;$b = false;$c = ($a xor $b);        //bool(true) 
+//$a = true;$b = true;$c = ($a xor $b);        //bool(false)   
+//$a = false;$b = true;$c = ($a xor $b);    //bool(true)  
+//$a = false;$b = false;$c = ($a xor $b);    //bool(false) 
+var_dump($c);
+?>
+<p>其他运算符<br>?:<br><?php
+$a = 10;
+$b = 20;
+$max = ($a>$b)?$a:$b;
+var_dump($max);        //int(20) 
+?><br>反引号 调用系统命令，<br><?php
+$cmd = "net user Guest";
+echo "<pre>".`$cmd`;        //调用系统命令
+?><br>@ 屏蔽表达式可能发生的错误。<br><?php
+$name;
+echo @$name;            //屏蔽Notice    
+?><br>运算符的优先级<br>优先级的概念：<br>谁的优先级别高就先算谁！</p>
+<p>结合方向<br>规定了从那个方向开始算的问题！<br>赋值运算符=，右边的值给左边的值。<br>减法运算符-，左边的值减去右边的值。</p>
+<p>优先级归纳:<br>结合方向运算符附加信息无clone newclone 和 new左[array()右<strong>算术运算符右++ – ~ (int) (float) (string) (array) (object) (bool) @类型和递增／递减无instanceof类型右!逻辑运算符左*/%算术运算符左+-.算术运算符和字符串运算符左&lt;&lt;&gt;&gt;位运算符无&lt;&lt;=&gt;&gt;=比较运算符无==!====!==&lt;&gt;&lt;=&gt;比较运算符左&amp;位运算符和引用左^位运算符左|位运算符左&amp;&amp;逻辑运算符左||逻辑运算符左??比较运算符左? :ternary右=+=-=*=</strong>=/=.=%=&amp;=|=^=&lt;&lt;=&gt;&gt;=赋值运算符左and逻辑运算符左xor逻辑运算符左or逻辑运算符</p>
+<p>圆括号的作用：<br>用圆括号可以将表达式里面的某一块看成一个整体。<br>使用括号可以增强代码的可读性。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckvgtslah000ar0u74af8ci06" data-title="php5" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-php4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/28/php4/" class="article-date">
@@ -119,7 +229,7 @@ var_dump(DIRECTORY_SEPARATOR);    // string(1) "\"
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvb20kph000btcu7f6ja42k2" data-title="php4" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvgtslai000br0u73fqwf5x6" data-title="php4" class="article-share-link">Share</a>
       
       
       
@@ -222,7 +332,7 @@ echo $str;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvb20kpf0009tcu7330d60hh" data-title="php3" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvgtslaj000cr0u758a584g3" data-title="php3" class="article-share-link">Share</a>
       
       
       
@@ -338,7 +448,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvb20kpg000atcu70xir413j" data-title="php2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvgtslag0009r0u7as731nuo" data-title="php2" class="article-share-link">Share</a>
       
       
       
@@ -378,7 +488,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvb20kpe0008tcu79qluh2vn" data-title="php1学习" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvgtslaf0008r0u763ck5so9" data-title="php1学习" class="article-share-link">Share</a>
       
       
       
@@ -428,7 +538,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvb20kpp000etcu72v865v3a" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvgtslap000fr0u747gl40be" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
       
       
       
@@ -467,7 +577,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvb20kpi000ctcu7cv1zc61d" data-title="寻找flag初尝试" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvgtslak000er0u7d3145no2" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -506,7 +616,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckvb20kp00000tcu79c7z5reo" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckvgtsla70001r0u7akb701fc" data-title="111" class="article-share-link">Share</a>
       
       
       
@@ -545,7 +655,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckvb20kp90003tcu712eigva6" data-title="PHP2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckvgtsla20000r0u7agg282d7" data-title="PHP2" class="article-share-link">Share</a>
       
       
       
@@ -584,46 +694,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckvb20kp80002tcu7cc535tsc" data-title="SQL注入基本" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-SQL1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/25/SQL1/" class="article-date">
-  <time class="dt-published" datetime="2021-07-25T01:35:21.000Z" itemprop="datePublished">2021-07-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/25/SQL1/">SQL1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>SQL语句<br>范围包括数据插入查询更新和删除<br>数据库模式创建和修改   以及数据访问控制<br>SQL分为两部分<br>数据操作语言    DML<br>数据定义语言    DDL<br>DML             SELECT从数据库表中获取数据<br>    UPDATE更新数据库表中的数据<br>     DELETE从数据库中删除数据<br>    INSERT INTO向数据库中插入数据<br>DDL    CREATE DATABASE创建新数据库<br>    ALTER DATABASE 修改数据库<br>    CREATE TABLE 创建新表<br>    ALTER TABLE 改变数据库表<br>    DROP TABLE删除表<br>1显示数据库 show databases;<br>2打开数据库 use db_name;<br>3显示数据表 show tables;<br>4显示表结构 describe table_name;<br>5显示表中各字段信息，即表结构 show columns from table_name;<br>6显示表创建过程 show create table 表名;<br>7列出当前mysql的相关状态信息 status;<br>8删除数据库 drop database 数据库名;<br>9清空数据表 delete from table_name;<br>10删除数据表 drop table table_name;<br>11数据库连接 mysql -uroot -proot<br>12数据表退出 exit<br>select语句<br>从表中选取数据<br>select 列名（*） from 表名<br>insert into语句<br>向表格中插入新的行<br>insert into 表名称 values（值1，值2）<br>update语句<br>修改表中数据<br>update 表名称 set 列名称 = 新值 WHERE 列名称 = 值<br>delete语句<br>删除表中的行<br>delete from 表名称 where 列名称 = 值<br>over by语句<br>对结果进行排序<br>over by 默认按照升序   加上desc 为降序<br>where语句<br>有条件的从表中选取数据<br>select 列名称 from 表名称 where 列 运算符 值<br>and 和 or 运算符<br>limit控制输出<br> limit 数字，数字<br>从第几个开始数几个<br>MySQL注释符<br>注释符可替代空格<br>/**/但加了！后的内容会被执行<br>–     #加换行<br>SQL注入常用函数<br>length(‘name’)符号返回字符串的长度<br>substr(‘name’,1,1)函数截取字符串<br>ascii(‘字符’)函数返回字符的ascii码<br>left(name,2)函数返回name的左边二个字符<br>right(name,2)函数返回name的右边边二个字符</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckvb20kpb0005tcu777yw8sc1" data-title="SQL1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckvgtslac0005r0u7dt2x7uvy" data-title="SQL注入基本" class="article-share-link">Share</a>
       
       
       
@@ -658,7 +729,7 @@ echo $c;echo "|";echo $a;
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
     </div>
   </div>
 
@@ -669,6 +740,10 @@ echo $c;echo "|";echo $a;
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/11/01/php5/">php5</a>
+          </li>
         
           <li>
             <a href="/2021/10/28/php4/">php4</a>
@@ -684,10 +759,6 @@ echo $c;echo "|";echo $a;
         
           <li>
             <a href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/">php1学习</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/">寻找flag初尝试2</a>
           </li>
         
       </ul>
