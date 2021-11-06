@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-11-01T15:36:41.572Z</updated>
+  <updated>2021-11-06T11:29:35.015Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linuxfork的运用</title>
+    <link href="https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/"/>
+    <id>https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/</id>
+    <published>2021-11-06T11:28:44.000Z</published>
+    <updated>2021-11-06T11:29:35.015Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php5</title>

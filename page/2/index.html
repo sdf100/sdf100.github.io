@@ -71,6 +71,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SQL注入基本" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" class="article-date">
+  <time class="dt-published" datetime="2021-08-01T01:16:08.000Z" itemprop="datePublished">2021-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/">SQL注入基本</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>MYsql系统表<br>information_schema是一个数据库<br>确切说师信息数据库，其中保存着其他数据库的信息。如数据名，数据表名<br>SCHEMATA表：提供了mysql实例中所有数据库的信息。show databases<br>tables表：数据库所有表的信息，表述了那个表属于哪个schema。 shows tables from schemaname<br>columns表：提供了表中的列的信息。详细表述了某表中所有列和每个列。show columns from<br>schemaname.tablename<br>SQL注入原理<br>SQL注入漏洞是由于WEB应用程序对用户输入数据合法性判断不严格导致。<br>是危害WEB安全的主要攻击手段<br>获取敏感数据<br>绕过登录验证<br>文件系统操作<br>注册表操作<br>执行系统命令<br>构造测试语句   提交请求  分析返回结果   符合（有注入漏洞）或不符合（不存在注入漏洞）<br>SQL注入常见攻击流程<br>1判断是否存在sql注入<br>常用payload<br>单引号：’(报错注入，回显注入  )<br>逻辑运算符：and or （盲注）<br>2判断sql注入类型<br>1 and 1=1<br>1’ and ‘1’=’1<br>3.获取字段数  order by<br>4.获取显示位  union select 1，2，3，4<br>5.获取数据库信息 version(), user(), @@datadir<br>6.获取当前数据库 database(), schema(),<br>7.获取所有数据库<br>8.获取数据库表<br>9.获取所有字段<br>10.获取数据</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckvnq6qu500055cu77kcp1ebg" data-title="SQL注入基本" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-SQL1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/07/25/SQL1/" class="article-date">
@@ -98,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckvgtslaa0003r0u70v1i3s4w" data-title="SQL1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckvnq6qu200025cu7cjnb8ooe" data-title="SQL1" class="article-share-link">Share</a>
       
       
       
@@ -137,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckvgtslae0007r0u73f4a3t7r" data-title="mysql的启动" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckvnq6qu600075cu74hlk36f7" data-title="mysql的启动" class="article-share-link">Share</a>
       
       
       
@@ -176,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckvgtsla90002r0u7bgn452vt" data-title="MySQLjichu1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckvnq6qu000015cu7cmrm3ry6" data-title="MySQLjichu1" class="article-share-link">Share</a>
       
       
       
@@ -223,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/13/html/" data-id="ckvgtslad0006r0u7djfiespo" data-title="html" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/13/html/" data-id="ckvnq6qu800095cu7erpvbvmv" data-title="html" class="article-share-link">Share</a>
       
       
       
@@ -262,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/11/web%E5%88%9D/" data-id="ckvgtslak000dr0u7elq02159" data-title="web初" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/11/web%E5%88%9D/" data-id="ckvnq6quc000e5cu7d2ghd633" data-title="web初" class="article-share-link">Share</a>
       
       
       
@@ -313,7 +352,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/06/hello-world/" data-id="ckvgtslab0004r0u7a51g628l" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/06/hello-world/" data-id="ckvnq6qu400045cu76p5g96cv" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -361,6 +400,10 @@
       <ul>
         
           <li>
+            <a href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/">linuxfork的运用</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/01/php5/">php5</a>
           </li>
         
@@ -374,10 +417,6 @@
         
           <li>
             <a href="/2021/10/22/php2-0/">php2</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/">php1学习</a>
           </li>
         
       </ul>

@@ -71,6 +71,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-linuxfork的运用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-11-06T11:28:44.000Z" itemprop="datePublished">2021-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/">linuxfork的运用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p> fork是Linux中用来创建与父进程相同子进程的系统调用函数，他创建一个原有进程的精确副本，包括所有的文件描述符，寄存器等全部内容。在fork之后，原有的进程及其副本（父与子）就分开了。在fork时，所有的变量具有一样的值，虽然父进程的数据被复制用以创建子进程，但是其中一个的后续变化并不会影响到另一个，两个进程就是独立个体，各自运行，互不干扰，父子进程谁先执行不由fork决定，而是由系统当前环境和进程调度算法决定，所以程序出来结果的顺序是不确定的。</p>
+<p>  子进程是从调用fork以后的代码开始执行的，fork调用一次会返回两个值，其中在子进程中返回0，在父进程中返回子进程的pid号。</p>
+<p>  下面给大家举三个例子：</p>
+<p>   程序一：</p>
+<p>  同学们，可以先根据程序，并依据我上面所说的知识点，猜测一下运行结果</p>
+<p>  最后运行的结果是：</p>
+<p>  我们可以看到程序既输出了world，又输出了hello，而其中world和hello分别是同一个if函数中if和else中的值，不可能同时打出，那现在竟然出现了这样的结果，是什么原因呢？</p>
+<p>  其实，正如我们上面所说，子进程是从调用fork以后的代码开始执行的，fork调用一次会返回两个值，其中在子进程中返回0，在父进程中返回子进程的pid号，父进程中的返回值是非0值，因此父进程打出world，而子进程中因为返回值是0，因此打出hello，所以既打出了world又打出了hello，但调用fork结束以后，两个进程就是独立个体，各自运行，互不干扰，父子进程谁先执行不由fork决定，而是由系统当前环境和进程调度算法决定，因此根据个人系统情况不同，打出world和hello的顺序不一定一致，我们只能确定运行出来的结果，但没办法确定运行结果出来的顺序。</p>
+<p>程序二：</p>
+<p>运行结果：</p>
+<p> 因此，结果是“A”，“B”，“B”。</p>
+<p>程序三：</p>
+<p>运行过程：</p>
+<p>它的结果是BBABAA，顺序不能确定，因为这是根据系统当前环境和进程调度算法决定。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/" data-id="ckvnq6qu600065cu7dsir0jjl" data-title="linuxfork的运用" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-php5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/01/php5/" class="article-date">
@@ -169,7 +221,7 @@ echo @$name;            //屏蔽Notice
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckvgtslah000ar0u74af8ci06" data-title="php5" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckvnq6qub000c5cu7evrhb6wy" data-title="php5" class="article-share-link">Share</a>
       
       
       
@@ -229,7 +281,7 @@ var_dump(DIRECTORY_SEPARATOR);    // string(1) "\"
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvgtslai000br0u73fqwf5x6" data-title="php4" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvnq6quc000d5cu7b9f11lpy" data-title="php4" class="article-share-link">Share</a>
       
       
       
@@ -332,7 +384,7 @@ echo $str;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvgtslaj000cr0u758a584g3" data-title="php3" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvnq6qua000b5cu722c3a1pi" data-title="php3" class="article-share-link">Share</a>
       
       
       
@@ -448,7 +500,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvgtslag0009r0u7as731nuo" data-title="php2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvnq6qu8000a5cu7fbtgf5mo" data-title="php2" class="article-share-link">Share</a>
       
       
       
@@ -488,7 +540,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvgtslaf0008r0u763ck5so9" data-title="php1学习" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvnq6qu700085cu75bruf58r" data-title="php1学习" class="article-share-link">Share</a>
       
       
       
@@ -538,7 +590,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvgtslap000fr0u747gl40be" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvnq6qud000f5cu7gjc40fon" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
       
       
       
@@ -577,7 +629,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvgtslak000er0u7d3145no2" data-title="寻找flag初尝试" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvnq6qui000g5cu736kh054p" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -616,7 +668,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckvgtsla70001r0u7akb701fc" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckvnq6qtv00005cu7henigrgm" data-title="111" class="article-share-link">Share</a>
       
       
       
@@ -655,46 +707,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckvgtsla20000r0u7agg282d7" data-title="PHP2" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-SQL注入基本" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" class="article-date">
-  <time class="dt-published" datetime="2021-08-01T01:16:08.000Z" itemprop="datePublished">2021-08-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/">SQL注入基本</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>MYsql系统表<br>information_schema是一个数据库<br>确切说师信息数据库，其中保存着其他数据库的信息。如数据名，数据表名<br>SCHEMATA表：提供了mysql实例中所有数据库的信息。show databases<br>tables表：数据库所有表的信息，表述了那个表属于哪个schema。 shows tables from schemaname<br>columns表：提供了表中的列的信息。详细表述了某表中所有列和每个列。show columns from<br>schemaname.tablename<br>SQL注入原理<br>SQL注入漏洞是由于WEB应用程序对用户输入数据合法性判断不严格导致。<br>是危害WEB安全的主要攻击手段<br>获取敏感数据<br>绕过登录验证<br>文件系统操作<br>注册表操作<br>执行系统命令<br>构造测试语句   提交请求  分析返回结果   符合（有注入漏洞）或不符合（不存在注入漏洞）<br>SQL注入常见攻击流程<br>1判断是否存在sql注入<br>常用payload<br>单引号：’(报错注入，回显注入  )<br>逻辑运算符：and or （盲注）<br>2判断sql注入类型<br>1 and 1=1<br>1’ and ‘1’=’1<br>3.获取字段数  order by<br>4.获取显示位  union select 1，2，3，4<br>5.获取数据库信息 version(), user(), @@datadir<br>6.获取当前数据库 database(), schema(),<br>7.获取所有数据库<br>8.获取数据库表<br>9.获取所有字段<br>10.获取数据</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckvgtslac0005r0u7dt2x7uvy" data-title="SQL注入基本" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckvnq6qu300035cu71syugjva" data-title="PHP2" class="article-share-link">Share</a>
       
       
       
@@ -742,6 +755,10 @@ echo $c;echo "|";echo $a;
       <ul>
         
           <li>
+            <a href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/">linuxfork的运用</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/01/php5/">php5</a>
           </li>
         
@@ -755,10 +772,6 @@ echo $c;echo "|";echo $a;
         
           <li>
             <a href="/2021/10/22/php2-0/">php2</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/21/php1%E5%AD%A6%E4%B9%A0/">php1学习</a>
           </li>
         
       </ul>
