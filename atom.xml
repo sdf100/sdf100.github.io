@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-11-06T11:29:35.015Z</updated>
+  <updated>2021-11-07T15:15:01.721Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>for循环</title>
+    <link href="https://sdf100.github.io/2021/11/07/for%E5%BE%AA%E7%8E%AF/"/>
+    <id>https://sdf100.github.io/2021/11/07/for%E5%BE%AA%E7%8E%AF/</id>
+    <published>2021-11-07T15:14:24.000Z</published>
+    <updated>2021-11-07T15:15:01.721Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;for 循环的一般形式为：&lt;br&gt;for(表达式1; 表达式2; 表达式3){&lt;br&gt;   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>linuxfork的运用</title>
