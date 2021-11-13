@@ -71,6 +71,78 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-一维数组" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/" class="article-date">
+  <time class="dt-published" datetime="2021-11-13T12:31:58.000Z" itemprop="datePublished">2021-11-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/">一维数组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一维数组指的是只有一个下标的数组，它用来表示一组具有相同类型的数据。在C语言中，一维数组的定义方式如下所示</p>
+<p>类型说明符 数组名[常量表达式];<br>在上述语法格式中，类型说明符表示数组中所有元素的类型，常量表达式指的是数组的长度，也就是数组中存放元素的个数。</p>
+<p>例</p>
+<p>int array[5l;</p>
+<p>上述代码定义了一个数组，其中，int是数组的类型，aray是数组的名称，方括号中的5是数组的长度。完成数组的定义后，只是对数组中的元素开辟了一块内存空间。这时，如果想使用数组操作数据，还需要对数组进行初始化。数组初始化的常见的方式有3种，具体如下</p>
+<p>（1）直接对数组中的所有元素赋值，示例代码如下：</p>
+<p>int i[5]={1,2,3,4,5};</p>
+<p>上述代码定义了一个长度为5的数组i，并且数组中元素的值依次为1、2、3、4、5。</p>
+<p>（2）只对数组中的一部分元素赋值，示例代码如下</p>
+<p>int i[5]={1,2,3};</p>
+<p>在上述代码中，定义了一个int类型的数组，但在初始化时，只对数组中的前3个元素进行了赋值，其他元素的值会被默认设置为</p>
+<p>（3）对数组全部元素赋值，但不指定长度，示例代码如下：</p>
+<p>int i[]={1,2,3,4};</p>
+<p>在上述代码中，数组i中的元素有4个，系统会根据给定初始化元素的个数定义数组的长度,因此，数组i的长度为4。</p>
+<p>注意</p>
+<p>（1）数组的下标是用方括号括起来的，而不是圆括号；</p>
+<p>（2）数组名的命名同变量名的命名规则相同；</p>
+<p>（3）数组定义中，常量表达式的值可以是符号常量，如下面的定义就是合法的。</p>
+<p>int a[N]; //假设预编译命令#define N 4，下标是符号常量</p>
+<p>一维数组的引用</p>
+<p>在程序中，经常需要访问数组中的一些元素，这时可以通过数组名和下标来引用数组中</p>
+<p>的元素。一维数组元素的引用方式如下所示：</p>
+<p>数组名 [下标];</p>
+<p>在上述方式中，下标指的是数组元素的位置,数组元素的下标是从0开始的。例如，引用数组X的第3个元素的方式为X[2]为了帮助大家更好地理解数组元素的引用榜下业通计一个室例来演示，如下所示：</p>
+<p>#include&lt;stdio.h&gt;</p>
+<p>void main(int argc, char *argv[]){<br>    int x[5] = {2,3,1,4,6};</p>
+<pre><code>int i;
+
+for (i = 0; i &lt; 5; i++) &#123;
+    printf(&quot;%d\n&quot;, 2 * x[i]);
+
+&#125;
+</code></pre>
+<p>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/" data-id="ckvxsj8ll000gngu7696h81wm" data-title="一维数组" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-for循环" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/07/for%E5%BE%AA%E7%8E%AF/" class="article-date">
@@ -111,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/07/for%E5%BE%AA%E7%8E%AF/" data-id="ckvpdnz6y00058gu77xc393f8" data-title="for循环" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/07/for%E5%BE%AA%E7%8E%AF/" data-id="ckvxsj8ky0005ngu73h5hat87" data-title="for循环" class="article-share-link">Share</a>
       
       
       
@@ -163,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/" data-id="ckvpdnz7200088gu7h2c2bwnu" data-title="linuxfork的运用" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/" data-id="ckvxsj8l30007ngu774jfegzp" data-title="linuxfork的运用" class="article-share-link">Share</a>
       
       
       
@@ -273,7 +345,7 @@ echo @$name;            //屏蔽Notice
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckvpdnz7a000e8gu74o2u2sai" data-title="php5" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckvxsj8lj000fngu76gnk96zw" data-title="php5" class="article-share-link">Share</a>
       
       
       
@@ -333,7 +405,7 @@ var_dump(DIRECTORY_SEPARATOR);    // string(1) "\"
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvpdnz79000d8gu7538h2m8u" data-title="php4" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckvxsj8le000cngu7ec3n4ike" data-title="php4" class="article-share-link">Share</a>
       
       
       
@@ -436,7 +508,7 @@ echo $str;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvpdnz78000c8gu78qc38qhl" data-title="php3" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckvxsj8lf000dngu76t03dt2t" data-title="php3" class="article-share-link">Share</a>
       
       
       
@@ -552,7 +624,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvpdnz77000b8gu78uuz813v" data-title="php2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckvxsj8lc000bngu77g6qb9or" data-title="php2" class="article-share-link">Share</a>
       
       
       
@@ -592,7 +664,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvpdnz7300098gu71k9qbop7" data-title="php1学习" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckvxsj8l9000angu75ts36r9n" data-title="php1学习" class="article-share-link">Share</a>
       
       
       
@@ -642,7 +714,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvpdnz7b000f8gu75b6hhlnd" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckvxsj8lp000hngu7hzzy1c6a" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
       
       
       
@@ -681,46 +753,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvpdnz7b000g8gu762lxddrf" data-title="寻找flag初尝试" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-111-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/10/111-2/" class="article-date">
-  <time class="dt-published" datetime="2021-09-10T09:06:59.000Z" itemprop="datePublished">2021-09-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/10/111-2/">111</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>1234</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckvpdnz6i00008gu7ezba4iva" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckvxsj8lq000ingu7hqey25h8" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -768,6 +801,10 @@ echo $c;echo "|";echo $a;
       <ul>
         
           <li>
+            <a href="/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/">一维数组</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/07/for%E5%BE%AA%E7%8E%AF/">for循环</a>
           </li>
         
@@ -781,10 +818,6 @@ echo $c;echo "|";echo $a;
         
           <li>
             <a href="/2021/10/28/php4/">php4</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/27/php3/">php3</a>
           </li>
         
       </ul>
