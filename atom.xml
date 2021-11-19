@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-11-13T12:33:14.882Z</updated>
+  <updated>2021-11-19T12:52:48.526Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库</title>
+    <link href="https://sdf100.github.io/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://sdf100.github.io/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+    <published>2021-11-19T12:52:09.000Z</published>
+    <updated>2021-11-19T12:52:48.526Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;数据库，是数据的集合，由一张张数据表组成，用来存放数据。可以把数据库比作冰箱，而冰箱存放的是食物。&lt;/p&gt;
+&lt;p&gt;在系统领域，通常所讲的数据库指的就是关系数据库。&lt;/p&gt;
+&lt;p&gt;关系数据库，是由多张能互相联结的二维行列表格组成的数据库。常用的关系数据库有SQL</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>一维数组</title>
