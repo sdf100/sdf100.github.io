@@ -71,6 +71,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-寻找flag初尝试2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" class="article-date">
+  <time class="dt-published" datetime="2021-10-17T09:43:16.000Z" itemprop="datePublished">2021-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/">寻找flag初尝试2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Step1：点击运维设备，会跳转到<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php%E7%95%8C%E9%9D%A2%E3%80%82">http://172.31.65.204/index.php界面。</a></p>
+<p>2、文件包含（参数为page）<br>Step2：点击信息的时候，URL会发生变化：<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?page=index%E8%A1%A8%E7%A4%BApage%E5%8F%AF%E4%BB%A5%E8%A2%AB%E8%B5%8B%E5%80%BC%E3%80%82">http://172.31.65.204/index.php?page=index表示page可以被赋值。</a></p>
+<p>（文件包含特征）</p>
+<p>3、rot13伪协议包含<br>Step3：page=php://filter/read=string.rot13/resource=index.php，此时将读取到index.php的内容中隐 藏的rot13格式的网站源码</p>
+<p>显示出来。可以理解为将rot13编码的源 码隐藏在index.php，利用这个payload的可以读出隐藏文件。</p>
+<p>4、rot13伪协议读取<br>Step4：访问<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?page=php://filter/read=string.rot13/resource=index.php">http://172.31.65.204/index.php?page=php://filter/read=string.rot13/resource=index.php</a></p>
+<p>右键查看源代码，可以看到rot13编码的密文</p>
+<p>5、rot13编码解码<br>Step5：利用ctfcracker来解码rot13，得到php源代码。</p>
+<p>6、代码审计<br>Step6：审计代码，发现是php的变量覆盖，利用php脚本来计算出hash中的sha384算法1的hash值，用来覆盖代码中的hash值。Hash值随便构造。以下为hash中的sha384算法1的hash值。</p>
+<p>47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776</p>
+<p>7、构造payload<br>Step7：审计代码，可知覆盖action=auth，&amp;key=1，hashed_key=sha384的1，构造payload。<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776">http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776</a></p>
+<p>访问<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776">http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckw7qa7sz000jewu7066y4rx8" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-寻找flag初尝试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" class="article-date">
@@ -98,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckw6dv2s9000ghgu706e1eay9" data-title="寻找flag初尝试" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%95/" data-id="ckw7qa7sy000iewu75dtcgsay" data-title="寻找flag初尝试" class="article-share-link">Share</a>
       
       
       
@@ -137,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckw6dv2rr0000hgu77r4odu1r" data-title="111" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/09/10/111-2/" data-id="ckw7qa7sm0001ewu7ajin65js" data-title="111" class="article-share-link">Share</a>
       
       
       
@@ -176,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckw6dv2rz0002hgu7dqrd4e22" data-title="PHP2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/08/PHP2/" data-id="ckw7qa7so0003ewu7c6qp4c8s" data-title="PHP2" class="article-share-link">Share</a>
       
       
       
@@ -215,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckw6dv2s10005hgu79osh4ogm" data-title="SQL注入基本" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/08/01/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E6%9C%AC/" data-id="ckw7qa7sp0004ewu72e4k3ils" data-title="SQL注入基本" class="article-share-link">Share</a>
       
       
       
@@ -254,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckw6dv2s00003hgu74k1g501z" data-title="SQL1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/25/SQL1/" data-id="ckw7qa7sn0002ewu72hm5f1g8" data-title="SQL1" class="article-share-link">Share</a>
       
       
       
@@ -293,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckw6dv2s40009hgu7b38r52u4" data-title="mysql的启动" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/18/mysql%E7%9A%84%E5%90%AF%E5%8A%A8/" data-id="ckw7qa7st0009ewu7f28h78tk" data-title="mysql的启动" class="article-share-link">Share</a>
       
       
       
@@ -332,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckw6dv2rx0001hgu7a3avhe5o" data-title="MySQLjichu1" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/16/MySQLjichu1/" data-id="ckw7qa7sh0000ewu7hmtecwti" data-title="MySQLjichu1" class="article-share-link">Share</a>
       
       
       
@@ -379,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/13/html/" data-id="ckw6dv2s30007hgu7gwr6fuj5" data-title="html" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/13/html/" data-id="ckw7qa7ss0008ewu70o9kc6cr" data-title="html" class="article-share-link">Share</a>
       
       
       
@@ -418,58 +468,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/11/web%E5%88%9D/" data-id="ckw6dv2s9000fhgu7hazeahrx" data-title="web初" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/07/06/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-07-06T08:23:29.982Z" itemprop="datePublished">2021-07-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/07/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/07/06/hello-world/" data-id="ckw6dv2s20006hgu70b78ax8c" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/07/11/web%E5%88%9D/" data-id="ckw7qa7sx000gewu792oo8xt6" data-title="web初" class="article-share-link">Share</a>
       
       
       
@@ -485,7 +484,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -517,6 +516,10 @@
       <ul>
         
           <li>
+            <a href="/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/">sql数据库2</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
           </li>
         
@@ -530,10 +533,6 @@
         
           <li>
             <a href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/">linuxfork的运用</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/01/php5/">php5</a>
           </li>
         
       </ul>

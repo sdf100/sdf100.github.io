@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>sql数据库2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="（1）如何插入数据？ ①学生表（student） 打开表： 点击“+”，新建记录： 也可以通过SQL语句来批量添加数据，具体操作如下： 查询-新建查询： 在查询编辑器写sql-运行： sql： insert into student(学号,姓名,出生日期,性别)            values(‘0001’,’结缔’,’1990-01-01’,’男’); insert into student">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql数据库2">
+<meta property="og:url" content="https://sdf100.github.io/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="（1）如何插入数据？ ①学生表（student） 打开表： 点击“+”，新建记录： 也可以通过SQL语句来批量添加数据，具体操作如下： 查询-新建查询： 在查询编辑器写sql-运行： sql： insert into student(学号,姓名,出生日期,性别)            values(‘0001’,’结缔’,’1990-01-01’,’男’); insert into student">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-20T11:26:50.000Z">
+<meta property="article:modified_time" content="2021-11-20T11:28:13.742Z">
+<meta property="article:author" content="sdf100">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sdf100.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-sql数据库2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/" class="article-date">
+  <time class="dt-published" datetime="2021-11-20T11:26:50.000Z" itemprop="datePublished">2021-11-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      sql数据库2
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>（1）如何插入数据？</p>
+<p>①学生表（student）</p>
+<p>打开表：</p>
+<p>点击“+”，新建记录：</p>
+<p>也可以通过SQL语句来批量添加数据，具体操作如下：</p>
+<p>查询-新建查询：</p>
+<p>在查询编辑器写sql-运行：</p>
+<p>sql：</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0001’,’结缔’,’1990-01-01’,’男’);</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0002’,’结缔’,’1990-12-10’,’女’);</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0003’,’热巴’,’1992-06-03’,’女’);</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0004’,’杨超越’,’1998-07-31’,’女’)<br>运行结果：</p>
+<p>保存-输入查询名：</p>
+<p>双击“student”的表就能看到表里添加的数据：</p>
+<p>②成绩表（score）</p>
+<p>写sql-运行-保存：</p>
+<p>sql：</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0001’,’0001’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0001’,’0002’,’90’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0001’,’0003’,’99’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0002’,’0002’,’60’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0002’,’0003’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0003’,’0001’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0003’,’0002’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0003’,’0003’,’80’)<br>③课程表（course）</p>
+<p>写sql-运行-保存：</p>
+<p>sql：</p>
+<p>insert into course(课程号,课程名称,教师号)<br>            values(‘0001’,’语文’,’0002’);</p>
+<p>insert into course(课程号,课程名称,教师号)<br>            values(‘0002’,’数学’,’0001’);</p>
+<p>insert into course(课程号,课程名称,教师号)<br>            values(‘0003’,’英语’,’0003’)<br>④教师表（teacher）</p>
+<p>写sql-运行-保存：</p>
+<p>sql：</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0001’,’猴子’);</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0002’,’陈伟霆’);</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0003’,null);</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0004’,’’)<br>（2）如何删除数据？</p>
+<p>点击“-”，删除记录：</p>
+<p>（3）SQL基本语法</p>
+<p>①SQL分类</p>
+<p>②SQL的书写规则：</p>
+<p>SQL语句以英文分号（;）结尾；<br>SQL语句不区分关键字的大小写；<br>输入符号的时候只能使用英文的。<br>五、总结</p>
+<p>一、什么是数据库？</p>
+<p>数据库，是数据的集合，由一张张数据表组成，用来存放数据。</p>
+<p>关系数据库，是由多张能互相联结的二维行列表格组成的数据库。</p>
+<p>每一张表都有一个唯一标识，即主键，用来表示数据的唯一性。</p>
+<p>表与表之间可以通过主键来互相联系，就是数据能够对应匹配，称之为联结。</p>
+<p>二、什么是SQL？</p>
+<p>SQL全称是 Structured Query Language（结构化查询语言），是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。</p>
+<p>用来管理数据库的计算机系统称为数据库管理系统（Database Management System，DBMS）。</p>
+<p>有了关系数据库，还要有关系数据库管理系统（DBMS），才能从数据库中提取和查询数据。</p>
+<p>三、下载和安装数据库、客户端</p>
+<p>四、表的创建、删除和更新</p>
+<p>（1）如何创建数据库？新建数据库</p>
+<p>（2）如何创建表？新建表-添加字段-添加主键-保存</p>
+<p>（3）如何删除表？删除表</p>
+<p>（4）如何更新表？设计表</p>
+<p>补充：数据类型</p>
+<p>五、数据的插入、删除和更新数据</p>
+<p>（1）如何插入数据？</p>
+<p>新建记录/通过SQL语句来批量添加数据（查询-新建查询-写sql-运行-保存-输入查询名）</p>
+<p>（2）如何删除数据？删除记录</p>
+<p>（3）SQL基本语法</p>
+<p>①SQL分类</p>
+<p>②SQL的书写规则：</p>
+<p>SQL语句以英文分号（;）结尾；<br>SQL语句不区分关键字的大小写；<br>输入符号的时候只能使用英文的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/" data-id="ckw7qa7sx000fewu76vonfhvk" data-title="sql数据库2" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据库</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/">sql数据库2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/">一维数组</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/07/for%E5%BE%AA%E7%8E%AF/">for循环</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/">linuxfork的运用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 sdf100<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

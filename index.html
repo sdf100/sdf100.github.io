@@ -71,6 +71,109 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sql数据库2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/" class="article-date">
+  <time class="dt-published" datetime="2021-11-20T11:26:50.000Z" itemprop="datePublished">2021-11-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/">sql数据库2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>（1）如何插入数据？</p>
+<p>①学生表（student）</p>
+<p>打开表：</p>
+<p>点击“+”，新建记录：</p>
+<p>也可以通过SQL语句来批量添加数据，具体操作如下：</p>
+<p>查询-新建查询：</p>
+<p>在查询编辑器写sql-运行：</p>
+<p>sql：</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0001’,’结缔’,’1990-01-01’,’男’);</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0002’,’结缔’,’1990-12-10’,’女’);</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0003’,’热巴’,’1992-06-03’,’女’);</p>
+<p>insert into student(学号,姓名,出生日期,性别)<br>            values(‘0004’,’杨超越’,’1998-07-31’,’女’)<br>运行结果：</p>
+<p>保存-输入查询名：</p>
+<p>双击“student”的表就能看到表里添加的数据：</p>
+<p>②成绩表（score）</p>
+<p>写sql-运行-保存：</p>
+<p>sql：</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0001’,’0001’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0001’,’0002’,’90’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0001’,’0003’,’99’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0002’,’0002’,’60’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0002’,’0003’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0003’,’0001’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0003’,’0002’,’80’);</p>
+<p>insert into score(学号,课程号,成绩)<br>            values(‘0003’,’0003’,’80’)<br>③课程表（course）</p>
+<p>写sql-运行-保存：</p>
+<p>sql：</p>
+<p>insert into course(课程号,课程名称,教师号)<br>            values(‘0001’,’语文’,’0002’);</p>
+<p>insert into course(课程号,课程名称,教师号)<br>            values(‘0002’,’数学’,’0001’);</p>
+<p>insert into course(课程号,课程名称,教师号)<br>            values(‘0003’,’英语’,’0003’)<br>④教师表（teacher）</p>
+<p>写sql-运行-保存：</p>
+<p>sql：</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0001’,’猴子’);</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0002’,’陈伟霆’);</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0003’,null);</p>
+<p>insert into teacher(教师号,教师姓名)<br>            values(‘0004’,’’)<br>（2）如何删除数据？</p>
+<p>点击“-”，删除记录：</p>
+<p>（3）SQL基本语法</p>
+<p>①SQL分类</p>
+<p>②SQL的书写规则：</p>
+<p>SQL语句以英文分号（;）结尾；<br>SQL语句不区分关键字的大小写；<br>输入符号的时候只能使用英文的。<br>五、总结</p>
+<p>一、什么是数据库？</p>
+<p>数据库，是数据的集合，由一张张数据表组成，用来存放数据。</p>
+<p>关系数据库，是由多张能互相联结的二维行列表格组成的数据库。</p>
+<p>每一张表都有一个唯一标识，即主键，用来表示数据的唯一性。</p>
+<p>表与表之间可以通过主键来互相联系，就是数据能够对应匹配，称之为联结。</p>
+<p>二、什么是SQL？</p>
+<p>SQL全称是 Structured Query Language（结构化查询语言），是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。</p>
+<p>用来管理数据库的计算机系统称为数据库管理系统（Database Management System，DBMS）。</p>
+<p>有了关系数据库，还要有关系数据库管理系统（DBMS），才能从数据库中提取和查询数据。</p>
+<p>三、下载和安装数据库、客户端</p>
+<p>四、表的创建、删除和更新</p>
+<p>（1）如何创建数据库？新建数据库</p>
+<p>（2）如何创建表？新建表-添加字段-添加主键-保存</p>
+<p>（3）如何删除表？删除表</p>
+<p>（4）如何更新表？设计表</p>
+<p>补充：数据类型</p>
+<p>五、数据的插入、删除和更新数据</p>
+<p>（1）如何插入数据？</p>
+<p>新建记录/通过SQL语句来批量添加数据（查询-新建查询-写sql-运行-保存-输入查询名）</p>
+<p>（2）如何删除数据？删除记录</p>
+<p>（3）SQL基本语法</p>
+<p>①SQL分类</p>
+<p>②SQL的书写规则：</p>
+<p>SQL语句以英文分号（;）结尾；<br>SQL语句不区分关键字的大小写；<br>输入符号的时候只能使用英文的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sdf100.github.io/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/" data-id="ckw7qa7sx000fewu76vonfhvk" data-title="sql数据库2" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-数据库" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="article-date">
@@ -139,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/" data-id="ckw6dv2sf000jhgu79bg2fehk" data-title="数据库" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/" data-id="ckw7qa7t5000kewu7h3e1gmrl" data-title="数据库" class="article-share-link">Share</a>
       
       
       
@@ -211,7 +314,7 @@ for (i = 0; i &lt; 5; i++) &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/" data-id="ckw6dv2sa000hhgu7blj9he30" data-title="一维数组" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/13/%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84/" data-id="ckw7qa7sy000hewu7g0badcw3" data-title="一维数组" class="article-share-link">Share</a>
       
       
       
@@ -263,7 +366,7 @@ for (i = 0; i &lt; 5; i++) &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/07/for%E5%BE%AA%E7%8E%AF/" data-id="ckw6dv2s00004hgu7ccm2e7f0" data-title="for循环" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/07/for%E5%BE%AA%E7%8E%AF/" data-id="ckw7qa7sq0005ewu7dgk86xva" data-title="for循环" class="article-share-link">Share</a>
       
       
       
@@ -315,7 +418,7 @@ for (i = 0; i &lt; 5; i++) &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/" data-id="ckw6dv2s40008hgu7e3ak1bq4" data-title="linuxfork的运用" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/" data-id="ckw7qa7sr0007ewu77txg0u50" data-title="linuxfork的运用" class="article-share-link">Share</a>
       
       
       
@@ -425,7 +528,7 @@ echo @$name;            //屏蔽Notice
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckw6dv2s8000ehgu72sbc3mwf" data-title="php5" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/11/01/php5/" data-id="ckw7qa7sw000eewu73vlucr2n" data-title="php5" class="article-share-link">Share</a>
       
       
       
@@ -485,7 +588,7 @@ var_dump(DIRECTORY_SEPARATOR);    // string(1) "\"
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckw6dv2s8000dhgu7exzzemsi" data-title="php4" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/28/php4/" data-id="ckw7qa7sw000dewu760b943jn" data-title="php4" class="article-share-link">Share</a>
       
       
       
@@ -588,7 +691,7 @@ echo $str;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckw6dv2s7000chgu71iz8fadj" data-title="php3" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/27/php3/" data-id="ckw7qa7su000bewu73pudeq7w" data-title="php3" class="article-share-link">Share</a>
       
       
       
@@ -704,7 +807,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckw6dv2s6000bhgu768hxad5b" data-title="php2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/22/php2-0/" data-id="ckw7qa7sv000cewu76hubads7" data-title="php2" class="article-share-link">Share</a>
       
       
       
@@ -744,57 +847,7 @@ echo $c;echo "|";echo $a;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckw6dv2s5000ahgu72q7l9urm" data-title="php1学习" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-寻找flag初尝试2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" class="article-date">
-  <time class="dt-published" datetime="2021-10-17T09:43:16.000Z" itemprop="datePublished">2021-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/">寻找flag初尝试2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Step1：点击运维设备，会跳转到<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php%E7%95%8C%E9%9D%A2%E3%80%82">http://172.31.65.204/index.php界面。</a></p>
-<p>2、文件包含（参数为page）<br>Step2：点击信息的时候，URL会发生变化：<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?page=index%E8%A1%A8%E7%A4%BApage%E5%8F%AF%E4%BB%A5%E8%A2%AB%E8%B5%8B%E5%80%BC%E3%80%82">http://172.31.65.204/index.php?page=index表示page可以被赋值。</a></p>
-<p>（文件包含特征）</p>
-<p>3、rot13伪协议包含<br>Step3：page=php://filter/read=string.rot13/resource=index.php，此时将读取到index.php的内容中隐 藏的rot13格式的网站源码</p>
-<p>显示出来。可以理解为将rot13编码的源 码隐藏在index.php，利用这个payload的可以读出隐藏文件。</p>
-<p>4、rot13伪协议读取<br>Step4：访问<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?page=php://filter/read=string.rot13/resource=index.php">http://172.31.65.204/index.php?page=php://filter/read=string.rot13/resource=index.php</a></p>
-<p>右键查看源代码，可以看到rot13编码的密文</p>
-<p>5、rot13编码解码<br>Step5：利用ctfcracker来解码rot13，得到php源代码。</p>
-<p>6、代码审计<br>Step6：审计代码，发现是php的变量覆盖，利用php脚本来计算出hash中的sha384算法1的hash值，用来覆盖代码中的hash值。Hash值随便构造。以下为hash中的sha384算法1的hash值。</p>
-<p>47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776</p>
-<p>7、构造payload<br>Step7：审计代码，可知覆盖action=auth，&amp;key=1，hashed_key=sha384的1，构造payload。<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776">http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776</a></p>
-<p>访问<a target="_blank" rel="noopener" href="http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776">http://172.31.65.204/index.php?action=auth&amp;key=1&amp;hashed_key=47f05d367b0c32e438fb63e6cf4a5f35c2aa2f90dc7543f8a41a0f95ce8a40a313ab5cf36134a2068c4c969cb50db776</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sdf100.github.io/2021/10/17/%E5%AF%BB%E6%89%BEflag%E5%88%9D%E5%B0%9D%E8%AF%952/" data-id="ckw6dv2sb000ihgu79qvf5cv1" data-title="寻找flag初尝试2" class="article-share-link">Share</a>
+      <a data-url="https://sdf100.github.io/2021/10/21/php1%E5%AD%A6%E4%B9%A0/" data-id="ckw7qa7st000aewu7ci8ye467" data-title="php1学习" class="article-share-link">Share</a>
       
       
       
@@ -810,7 +863,7 @@ echo $c;echo "|";echo $a;
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -842,6 +895,10 @@ echo $c;echo "|";echo $a;
       <ul>
         
           <li>
+            <a href="/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/">sql数据库2</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/19/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
           </li>
         
@@ -855,10 +912,6 @@ echo $c;echo "|";echo $a;
         
           <li>
             <a href="/2021/11/06/linuxfork%E7%9A%84%E8%BF%90%E7%94%A8/">linuxfork的运用</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/01/php5/">php5</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="https://sdf100.github.io/atom.xml" rel="self"/>
   
   <link href="https://sdf100.github.io/"/>
-  <updated>2021-11-19T12:52:48.526Z</updated>
+  <updated>2021-11-20T11:28:13.742Z</updated>
   <id>https://sdf100.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sql数据库2</title>
+    <link href="https://sdf100.github.io/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/"/>
+    <id>https://sdf100.github.io/2021/11/20/sql%E6%95%B0%E6%8D%AE%E5%BA%932/</id>
+    <published>2021-11-20T11:26:50.000Z</published>
+    <updated>2021-11-20T11:28:13.742Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;（1）如何插入数据？&lt;/p&gt;
+&lt;p&gt;①学生表（student）&lt;/p&gt;
+&lt;p&gt;打开表：&lt;/p&gt;
+&lt;p&gt;点击“+”，新建记录：&lt;/p&gt;
+&lt;p&gt;也可以通过SQL语句来批量添加数据，具体操作如下：&lt;/p&gt;
+&lt;p&gt;查询-新建查询：&lt;/p&gt;
+&lt;p&gt;在查询编辑器写sql-运行：&lt;/p&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数据库</title>
@@ -417,27 +444,6 @@
         
         
     <summary type="html">&lt;p&gt;软件由两部分组成&lt;br&gt;客户端    服务器&lt;br&gt;服务器开发语言 Java主 PHP C# Python Node.js&lt;br&gt;客户端形式 文字客户端 图形化界面 网页B/S&lt;br&gt;网页优于软件：不需要安装 无需更新 跨平台&lt;br&gt;网页使用的语言  HTML CSS</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://sdf100.github.io/2021/07/06/hello-world/"/>
-    <id>https://sdf100.github.io/2021/07/06/hello-world/</id>
-    <published>2021-07-06T08:23:29.982Z</published>
-    <updated>2021-07-06T08:23:29.982Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     
